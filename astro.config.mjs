@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
-
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://greciaqp.github.io',
+  site: 'https://grecia270597.github.io',
   base: '/',
 });
+
