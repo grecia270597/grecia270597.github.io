@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ principal ] # Aquí usamos tu rama real
+    branches: [ principal ]
   workflow_dispatch:
 
 permissions:
@@ -17,15 +17,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
-        uses: withastro/action@v3 # Usamos una versión estable de la acción
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: withastro/action@v2
